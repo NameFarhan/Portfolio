@@ -15,19 +15,18 @@ const Navbar = () => {
     setOpenModal(false);
   };
 
-
   const buttonStyles = {
     color: "#fff",
     "&:hover": {
-      color: "green",
+      color: "#36c270",
     },
     fontWeight: "500",
-    fontSize: '12px',
-  };  
+    fontSize: "12px",
+  };
 
   return (
     <>
-      <Box sx={{ padding: "2vh 5vw", bgcolor: "rgba(10, 10, 10, 0.9)" }}>
+      <Box sx={{ padding: "2vh 5vw", bgcolor: "#13131d" }}>
         <Box
           sx={{
             display: {
@@ -57,39 +56,52 @@ const Navbar = () => {
               mobile: "block",
               laptop: "none",
             },
-            margin: 'auto',
-            cursor: 'pointer',
+            margin: "auto",
+            cursor: "pointer",
+            width:'40px',
+            height:'40px'
           }}
         />
-
         <Modal
           open={openModal}
           onClose={handleModalClose}
           sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Box
             sx={{
               bgcolor: "rgba(10, 10, 10, 0.9)",
-              borderRadius: 2,
+              borderRadius: 0,
               p: 4,
-              color:'#fff',
-              textAlign:'center',
+              color: "#fff",
+              textAlign: "center",
+              outline:'none'
             }}
           >
-            <Typography sx={{mb:'1rem'}} variant="h6" component="h2">
+            <Typography sx={{ mb: "1rem" }} variant="h6" component="h2">
               Navigation
             </Typography>
-            <Button sx={buttonStyles} onClick={handleModalClose}>Home</Button>
-            <Button sx={buttonStyles} onClick={handleModalClose}>About</Button>
-            <Button sx={buttonStyles} onClick={handleModalClose}>Portfolio</Button>
-            <Button sx={buttonStyles} onClick={handleModalClose}>Services</Button>
-            <Button sx={buttonStyles} onClick={handleModalClose}>Blog</Button>
-            <Button sx={buttonStyles} onClick={handleModalClose}>Contact</Button>
+            <Button sx={buttonStyles} onClick={handleModalClose}>
+              Home
+            </Button>
+            <Button sx={buttonStyles} onClick={handleModalClose}>
+              About
+            </Button>
+            <Button sx={buttonStyles} onClick={handleModalClose}>
+              Portfolio
+            </Button>
+            <Button sx={buttonStyles} onClick={handleModalClose}>
+              Services
+            </Button>
+            <Button sx={buttonStyles} onClick={handleModalClose}>
+              Blog
+            </Button>
+            <Button sx={buttonStyles} onClick={handleModalClose}>
+              Contact
+            </Button>
           </Box>
         </Modal>
       </Box>
