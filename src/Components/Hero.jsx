@@ -15,6 +15,9 @@ const Hero = () => {
         p="2rem 0 0 0"
       >
         <Grid2
+        data-aos="fade-right"
+        data-aos-offset="100"
+        data-aos-duration="900"
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -57,6 +60,9 @@ const Hero = () => {
 
         {/* Image Grid */}
         <Grid2
+        data-aos="fade-left"
+        data-aos-offset="100"
+        data-aos-duration="900"
           display={{
             mobile: "none",
             laptop: "flex",

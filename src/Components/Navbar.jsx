@@ -28,6 +28,9 @@ const Navbar = () => {
     <>
       <Box sx={{ padding: "2vh 5vw", bgcolor: "#13131d" }}>
         <Box
+        data-aos="fade-in"
+        data-aos-offset="100"
+        data-aos-duration="1400"
           sx={{
             display: {
               mobile: "none",
@@ -49,6 +52,9 @@ const Navbar = () => {
           <Button sx={buttonStyles}>Contact</Button>
         </Box>
         <MenuIcon
+        data-aos="fade-in"
+        data-aos-offset="100"
+        data-aos-duration="1400"
           onClick={handleModalOpen}
           sx={{
             color: "#fff",

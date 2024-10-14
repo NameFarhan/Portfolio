@@ -11,6 +11,10 @@ const About = () => {
       <Wrapper>
         <Box sx={{ textAlign: "center" }}>
           <Typography
+            data-aos="fade-left"
+            data-aos-offset="100"
+            data-aos-duration="900"
+            data-aos-once="true"
             sx={{
               color: "#fff",
               fontSize: {
@@ -24,6 +28,10 @@ const About = () => {
             ABOUT ME
           </Typography>
           <Typography
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-duration="900"
+            data-aos-once="true"
             sx={{
               color: "#4c4d54",
               fontSize: {
@@ -94,6 +102,10 @@ const About = () => {
         >
           <Grid2 container>
             <Grid2
+              data-aos="fade-right"
+              data-aos-offset="100"
+              data-aos-duration="900"
+              data-aos-once="true"
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -124,11 +136,11 @@ const About = () => {
                         mobile: "14px",
                         laptop: "18px",
                       },
-                      position:{
-                        mobile:'relative'
+                      position: {
+                        mobile: "relative",
                       },
-                      left:'.3rem',
-                      top:'.1rem'
+                      left: ".3rem",
+                      top: ".1rem",
                     }}
                   >
                     Farhan Ali
@@ -156,11 +168,11 @@ const About = () => {
                         mobile: "14px",
                         laptop: "18px",
                       },
-                      position:{
-                        mobile:'relative'
+                      position: {
+                        mobile: "relative",
                       },
-                      left:'.3rem',
-                      top:'.1rem'
+                      left: ".3rem",
+                      top: ".1rem",
                     }}
                   >
                     27 OCT 2007
@@ -186,12 +198,11 @@ const About = () => {
                         mobile: "14px",
                         laptop: "18px",
                       },
-                      position:{
-                        mobile:'relative'
+                      position: {
+                        mobile: "relative",
                       },
-                      left:'.3rem',
-                      top:'.1rem'
-
+                      left: ".3rem",
+                      top: ".1rem",
                     }}
                   >
                     Farhanalibwn1215@gmail.com
@@ -200,6 +211,10 @@ const About = () => {
               </Box>
             </Grid2>
             <Grid2
+              data-aos="fade-left"
+              data-aos-offset="100"
+              data-aos-duration="1000"
+              data-aos-once="true"
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -211,13 +226,13 @@ const About = () => {
             >
               <Box
                 sx={{
-                  mt:'2rem',
+                  mt: "2rem",
                   mb: "2rem",
                   position: {
                     mobile: "relative",
                     laptop: "static",
                   },
-                  right:'25px',
+                  right: "25px",
                 }}
               >
                 <Typography
@@ -238,7 +253,16 @@ const About = () => {
                 >
                   HTML5 & CSS3
                 </Typography>
-                <ProgressBar completed={90} width="200px" bgColor="#36c270" borderRadius="5px" />
+                <ProgressBar
+                  completed={90}
+                  width="200px"
+                  bgColor="#36c270"
+                  borderRadius="5px"
+                  baseBgColor="#161621"
+                  animateOnRender={true}
+                  transitionTimingFunction="ease-in-out"
+                  transitionDuration="3s"
+                />
                 <Typography
                   sx={{
                     color: "white",
@@ -252,7 +276,16 @@ const About = () => {
                 >
                   JavaScript
                 </Typography>
-                <ProgressBar completed={80} width="200px" bgColor="#36c270" borderRadius="5px" />
+                <ProgressBar
+                  completed={80}
+                  width="200px"
+                  bgColor="#36c270"
+                  borderRadius="5px"
+                  baseBgColor="#161621"
+                  animateOnRender={true}
+                  transitionTimingFunction="ease-in-out"
+                  transitionDuration="3s"
+                />
                 <Typography
                   sx={{
                     color: "white",
@@ -266,7 +299,16 @@ const About = () => {
                 >
                   Material Ui
                 </Typography>
-                <ProgressBar completed={85} width="200px" bgColor="#36c270" borderRadius="5px" />
+                <ProgressBar
+                  completed={85}
+                  width="200px"
+                  bgColor="#36c270"
+                  borderRadius="5px"
+                  baseBgColor="#161621"
+                  animateOnRender={true}
+                  transitionTimingFunction="ease-in-out"
+                  transitionDuration="3s"
+                />
                 <Typography
                   sx={{
                     color: "white",
@@ -280,7 +322,16 @@ const About = () => {
                 >
                   Responsive Design
                 </Typography>
-                <ProgressBar completed={90} width="200px" bgColor="#36c270" borderRadius="5px"/>
+                <ProgressBar
+                  completed={90}
+                  width="200px"
+                  bgColor="#36c270"
+                  borderRadius="5px"
+                  baseBgColor="#161621"
+                  animateOnRender={true}
+                  transitionTimingFunction="ease-in-out"
+                  transitionDuration="3s"
+                />
               </Box>
             </Grid2>
           </Grid2>
