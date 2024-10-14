@@ -2,6 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Box, Grid2, Typography } from "@mui/material";
 import Wrapper from "../CustomHooks/Wrapper";
 import React from "react";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 const About = () => {
   const theme = useTheme();
@@ -25,7 +26,10 @@ const About = () => {
           <Typography
             sx={{
               color: "#4c4d54",
-              fontSize: "14px",
+              fontSize: {
+                mobile: "14px",
+                laptop: "12px",
+              },
               margin: "1rem auto 2rem auto",
               maxWidth: "600px",
               lineHeight: "1.5", // Optional: improve readability
@@ -105,10 +109,10 @@ const About = () => {
                     sx={{
                       color: "green",
                       fontSize: {
-                        mobile: "14px",
-                        laptop: "18px",
+                        mobile: "18px",
+                        laptop: "20px",
                       },
-                      fontWeight: "700",
+                      fontWeight: "800",
                     }}
                   >
                     FullName:
@@ -120,6 +124,11 @@ const About = () => {
                         mobile: "14px",
                         laptop: "18px",
                       },
+                      position:{
+                        mobile:'relative'
+                      },
+                      left:'.3rem',
+                      top:'.1rem'
                     }}
                   >
                     Farhan Ali
@@ -132,10 +141,10 @@ const About = () => {
                     sx={{
                       color: "green",
                       fontSize: {
-                        mobile: "14px",
-                        laptop: "18px",
+                        mobile: "18px",
+                        laptop: "20px",
                       },
-                      fontWeight: "700",
+                      fontWeight: "800",
                     }}
                   >
                     Birthday:
@@ -147,6 +156,11 @@ const About = () => {
                         mobile: "14px",
                         laptop: "18px",
                       },
+                      position:{
+                        mobile:'relative'
+                      },
+                      left:'.3rem',
+                      top:'.1rem'
                     }}
                   >
                     27 OCT 2007
@@ -157,10 +171,10 @@ const About = () => {
                     sx={{
                       color: "green",
                       fontSize: {
-                        mobile: "14px",
-                        laptop: "18px",
+                        mobile: "18px",
+                        laptop: "20px",
                       },
-                      fontWeight: "700",
+                      fontWeight: "800",
                     }}
                   >
                     Email:
@@ -172,6 +186,12 @@ const About = () => {
                         mobile: "14px",
                         laptop: "18px",
                       },
+                      position:{
+                        mobile:'relative'
+                      },
+                      left:'.3rem',
+                      top:'.1rem'
+
                     }}
                   >
                     Farhanalibwn1215@gmail.com
@@ -189,10 +209,78 @@ const About = () => {
                 laptop: 6,
               }}
             >
-              <Box>
-                <Typography sx={{ fontWeight: "700", color: "#fff" }}>
+              <Box
+                sx={{
+                  mt:'2rem',
+                  mb: "2rem",
+                  position: {
+                    mobile: "relative",
+                    laptop: "static",
+                  },
+                  right:'25px',
+                }}
+              >
+                <Typography
+                  sx={{ fontWeight: "700", color: "#fff", fontSize: "20px" }}
+                >
                   SKILLS
                 </Typography>
+                <Typography
+                  sx={{
+                    color: "white",
+                    fontSize: {
+                      mobile: "14px",
+                      laptop: "16px",
+                    },
+                    mt: "1rem",
+                    mb: "1rem",
+                  }}
+                >
+                  HTML5 & CSS3
+                </Typography>
+                <ProgressBar completed={90} width="200px" bgColor="#36c270" borderRadius="5px" />
+                <Typography
+                  sx={{
+                    color: "white",
+                    fontSize: {
+                      mobile: "14px",
+                      laptop: "16px",
+                    },
+                    mt: "1rem",
+                    mb: "1rem",
+                  }}
+                >
+                  JavaScript
+                </Typography>
+                <ProgressBar completed={80} width="200px" bgColor="#36c270" borderRadius="5px" />
+                <Typography
+                  sx={{
+                    color: "white",
+                    fontSize: {
+                      mobile: "14px",
+                      laptop: "16px",
+                    },
+                    mt: "1rem",
+                    mb: "1rem",
+                  }}
+                >
+                  Material Ui
+                </Typography>
+                <ProgressBar completed={85} width="200px" bgColor="#36c270" borderRadius="5px" />
+                <Typography
+                  sx={{
+                    color: "white",
+                    fontSize: {
+                      mobile: "14px",
+                      laptop: "16px",
+                    },
+                    mt: "1rem",
+                    mb: "1rem",
+                  }}
+                >
+                  Responsive Design
+                </Typography>
+                <ProgressBar completed={90} width="200px" bgColor="#36c270" borderRadius="5px"/>
               </Box>
             </Grid2>
           </Grid2>
