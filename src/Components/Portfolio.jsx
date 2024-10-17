@@ -14,7 +14,7 @@ const Portfolio = () => {
       <Box
         sx={{
           padding: "5vh 5vw",
-          bgcolor: "#1b1b27",
+          bgcolor: "#1b1b27f7",
           color: "#fff",
           display: "flex",
           flexDirection: "column",

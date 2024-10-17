@@ -9,7 +9,7 @@ const Achievments = () => {
   const theme = useTheme();
   return (
     <>
-      <Box sx={{ padding: "10vh 10vw", bgcolor: "#1b1b27" }}>
+      <Box sx={{ padding: "10vh 10vw", bgcolor: "#1b1b27f7" }}>
         <Grid2 container spacing={{
             mobile:5,
             laptop:6

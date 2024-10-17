@@ -8,7 +8,7 @@ import React from "react";
 const Services = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ bgcolor: "#14141e", color: "#fff", padding: "5vh 5vw" }}>
+    <Box sx={{ bgcolor: "#212139", color: "#fff", padding: "5vh 5vw" }}>
       <Typography
         data-aos="fade-left"
         data-aos-offset="100"
@@ -46,10 +46,6 @@ const Services = () => {
 
       {/* container  */}
       <Grid2
-        data-aos="fade-left"
-        data-aos-offset="100"
-        data-aos-duration="900"
-        data-aos-once="true"
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -60,6 +56,10 @@ const Services = () => {
         }}
       >
         <Grid2
+        data-aos="fade-right"
+        data-aos-offset="100"
+        data-aos-duration="900"
+        data-aos-once="true"
           display="flex"
           justifyContent="center"
           alignItems="center"
@@ -113,6 +113,10 @@ const Services = () => {
         </Grid2>
 
         <Grid2
+        data-aos="fade-in"
+        data-aos-offset="100"
+        data-aos-duration="900"
+        data-aos-once="true"
           display="flex"
           justifyContent="center"
           alignItems="center"
@@ -166,6 +170,10 @@ const Services = () => {
         </Grid2>
 
         <Grid2
+        data-aos="fade-left"
+        data-aos-offset="100"
+        data-aos-duration="900"
+        data-aos-once="true"
           display="flex"
           justifyContent="center"
           alignItems="center"

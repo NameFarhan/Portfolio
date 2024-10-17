@@ -11,7 +11,7 @@ const Hero = () => {
         justifyContent="center"
         alignItems="center"
         container
-        bgcolor="#13131d"
+        bgcolor="#1b1b27f7"
         p="2rem 0 0 0"
       >
         <Grid2

@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Box sx={{ padding: "2vh 5vw", bgcolor: "#13131d" }}>
+      <Box sx={{ padding: "2vh 5vw", bgcolor: "#1b1b27f7" }}>
         <Box
         data-aos="fade-in"
         data-aos-offset="100"
@@ -48,7 +48,6 @@ const Navbar = () => {
           <Button sx={buttonStyles}>About</Button>
           <Button sx={buttonStyles}>Portfolio</Button>
           <Button sx={buttonStyles}>Services</Button>
-          <Button sx={buttonStyles}>Blog</Button>
           <Button sx={buttonStyles}>Contact</Button>
         </Box>
         <MenuIcon
@@ -101,9 +100,6 @@ const Navbar = () => {
             </Button>
             <Button sx={buttonStyles} onClick={handleModalClose}>
               Services
-            </Button>
-            <Button sx={buttonStyles} onClick={handleModalClose}>
-              Blog
             </Button>
             <Button sx={buttonStyles} onClick={handleModalClose}>
               Contact
