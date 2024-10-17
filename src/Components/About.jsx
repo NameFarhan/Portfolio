@@ -7,7 +7,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 const About = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ bgcolor: "#1f2437", padding: "5vh 0" }}>
+    <Box sx={{ bgcolor: "#14141e", padding: "5vh 0" }}>
       <Wrapper>
         <Box sx={{ textAlign: "center" }}>
           <Typography
