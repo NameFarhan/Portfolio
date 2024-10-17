@@ -42,6 +42,7 @@ const About = () => {
               maxWidth: "600px",
               lineHeight: "1.5", // Optional: improve readability
               letterSpacing: ".8px",
+              fontWeight:'300'
             }}
           >
             Hi, I’m Farhan Ali, a passionate front-end developer with over{" "}
@@ -274,7 +275,7 @@ const About = () => {
                     mb: "1rem",
                   }}
                 >
-                  JavaScript
+                  React
                 </Typography>
                 <ProgressBar
                   completed={80}
