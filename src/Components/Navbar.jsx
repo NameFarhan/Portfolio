@@ -58,7 +58,7 @@ const Navbar = () => {
           sx={{
             color: "#fff",
             display: {
-              mobile: "block",
+              mobile: "flex",
               laptop: "none",
             },
             margin: "auto",
