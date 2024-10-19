@@ -1,6 +1,6 @@
 import { useTheme } from "@emotion/react";
 import { Box, Grid2, Typography } from "@mui/material";
-import Wrapper from "../CustomHooks/Wrapper";
+import Wrapper from "../Custom/Wrapper";
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 

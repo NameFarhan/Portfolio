@@ -8,6 +8,7 @@ import Services from "../Components/Services";
 import { theme } from "../Theme/BreakpointsTheme";
 import Achievments from "../Components/Achievments";
 import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Services/>
       <Achievments/>
       <Contact/>
+      <Footer/>
     </ThemeProvider>
   );
 };

@@ -1,10 +1,11 @@
 import { useTheme } from "@emotion/react";
-import { Box, Grid2, Typography } from "@mui/material";
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import WebIcon from '@mui/icons-material/Web';
+import { Box, Button, Grid2, Typography } from "@mui/material";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import WebIcon from "@mui/icons-material/Web";
 import React from "react";
 import ContactForm from "./ContactForm";
+import { CustomButton } from "../Custom/ContactButton";
 
 const Contact = () => {
   const theme = useTheme();
@@ -57,7 +58,7 @@ const Contact = () => {
             laptop: 4,
           }}
         >
-          <Grid2 
+          <Grid2
             data-aos="fade-right"
             data-aos-offset="100"
             data-aos-duration="900"
@@ -228,9 +229,24 @@ const Contact = () => {
             </Box>
           </Grid2>
         </Grid2>
-
-        <ContactForm/>
-
+        {/* Here is the contact form */}
+        <ContactForm />
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: {
+              mobile: "center",
+              laptop: "flex-end",
+            },
+            mt: {
+              mobile: "2rem",
+              laptop: "1rem",
+            },
+          }}
+        >
+          <CustomButton>SEND MESSAGE</CustomButton>
+        </Box>
       </Box>
     </>
   );
