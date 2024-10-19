@@ -23,7 +23,8 @@ const Footer = () => {
               mobile: "11px",
               laptop: "12px",
             },
-            textAlign:'center'
+            textAlign: "center",
+            opacity:'1'
           }}
         >
           COPYRIGHT © 2024 ALL RIGHTS RESERVED

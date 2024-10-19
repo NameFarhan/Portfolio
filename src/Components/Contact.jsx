@@ -1,14 +1,77 @@
 import { useTheme } from "@emotion/react";
-import { Box, Button, Grid2, Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WebIcon from "@mui/icons-material/Web";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContactForm from "./ContactForm";
 import { CustomButton } from "../Custom/ContactButton";
+import emailjs from "@emailjs/browser";
+import SimpleAlert from "../MuiComponents/Alert";
 
 const Contact = () => {
   const theme = useTheme();
+  const [Name, setName] = useState("");
+  const [YourEmail, setYourEmail] = useState("");
+  const [YourRequirements, setYourRequirements] = useState("");
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [requirementsError, setRequirementsError] = useState(false);
+  const [Alert, setAlert] = useState(false);
+
+  useEffect(() => {
+    emailjs.init("_0TVytWZ61HeXc11D"); // Initialize EmailJS with the public key (user ID)
+  }, []);
+
+  const handleSubmit = () => {
+    let isValid = true;
+
+    if (!Name) {
+      setNameError(true);
+      isValid = false;
+    } else {
+      setNameError(false);
+    }
+
+    if (!YourEmail || !/\S+@\S+\.\S+/.test(YourEmail)) {
+      setEmailError(true);
+      isValid = false;
+    } else {
+      setEmailError(false);
+    }
+
+    if (!YourRequirements) {
+      setRequirementsError(true);
+      isValid = false;
+    } else {
+      setRequirementsError(false);
+    }
+
+    if (isValid) {
+      const serviceId = "service_pkxd6t5";
+      const templateId = "template_p5n5o9q";
+
+      const templateParams = {
+        from_name: Name,
+        from_email: YourEmail,
+        to_name: "Farhan Ali",
+        message: YourRequirements,
+      };
+
+      emailjs
+        .send(serviceId, templateId, templateParams)
+        .then((response) => {
+          console.log("Email sent Successfully!", response);
+          setAlert(true);
+          setName("");
+          setYourEmail("");
+          setYourRequirements("");
+        })
+        .catch((error) => {
+          console.log("Email Failed to Send", error);
+        });
+    }
+  };
   return (
     <>
       <Box sx={{ padding: "10vh 10vw", bgcolor: "#212139", color: "#fff" }}>
@@ -230,7 +293,20 @@ const Contact = () => {
           </Grid2>
         </Grid2>
         {/* Here is the contact form */}
-        <ContactForm />
+        <ContactForm
+          Name={Name}
+          setName={setName}
+          YourEmail={YourEmail}
+          setYourEmail={setYourEmail}
+          YourRequirements={YourRequirements}
+          setYourRequirements={setYourRequirements}
+          nameError={nameError}
+          setNameError={setNameError}
+          emailError={emailError}
+          setEmailError={setEmailError}
+          requirementsError={requirementsError}
+          setRequirementsError={setRequirementsError}
+        />
         <Box
           sx={{
             display: "flex",
@@ -245,8 +321,16 @@ const Contact = () => {
             },
           }}
         >
-          <CustomButton>SEND MESSAGE</CustomButton>
+          <CustomButton onClick={handleSubmit}>SEND MESSAGE</CustomButton>
         </Box>
+        {Alert ? (
+          <>
+            <SimpleAlert
+            />
+          </>
+        ) : (
+          ""
+        )}
       </Box>
     </>
   );
